@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #66545e;
+        }
+
+        /* Header and Logo Styling */
+        header {
+            background-color: #66545e;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Navigation Menu Styling */
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: #66545e;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #66545e;
+            color: #fff;
+        }
+
+        /* Content Section */
+        .content {
+            text-align: center;
+            padding: 50px;
+        }
+
+        /* Featured Projects Section */
+        .projects {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+        }
+
+        .project {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+        }
+
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .project h3 {
+            margin-top: 10px;
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: #ececec;
+            padding: 40px;
+            margin-top: 30px;
+            border-radius: 8px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .skills h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        /* Call to Action Section */
+        .cta {
+            background-color: #66545e;
+            color: #fff;
+            padding: 50px;
+            margin-top: 50px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .cta h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .cta button {
+            padding: 12px 30px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #66545e;
+            border: 1px solid #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta button:hover {
+            background-color: #66545e;
+            color: #fff;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #66545e;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Logo -->
+    <header>
+        <h1>Janvi Kachhadiya</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/gallry">Gallery</a>
+        <a href="/portfolio">Portfolio</a>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Welcome to Janvi Kachhadiya's Website</h2>
+        <p>I'm a web developer passionate about creating user-friendly websites and exploring new technologies. Take a look at my work, skills, and more!</p>
+    </div>
+
+    <!-- Featured Projects Section -->
+    <div class="projects">
+        <div class="project">
+            <img src="https://images.pexels.com/photos/5292193/pexels-photo-5292193.jpeg" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>A brief description of the project.</p>
+        </div>
+        <div class="project">
+            <img src="https://images.pexels.com/photos/5466151/pexels-photo-5466151.jpeg" alt="Project 2">
+            <h3>Project 2</h3>
+            <p>A brief description of the project.</p>
+        </div>
+        <div class="project">
+            <img src="https://images.pexels.com/photos/6476260/pexels-photo-6476260.jpeg" alt="Project 3">
+            <h3>Project 3</h3>
+            <p>A brief description of the project.</p>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills">
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript (React, Vue.js)</li>
+            <li>Python (Django, Flask)</li>
+            <li>Web Design (Figma, Adobe XD)</li>
+            <li>SEO Optimization</li>
+            <li>Database Management (MySQL, PostgreSQL)</li>
+        </ul>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="cta">
+        <h2>Interested in working with me?</h2>
+        <p>If you're looking for a passionate and skilled web developer, feel free to contact me and let's build something great together!</p>
+        <button>Contact Me</button>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Janvi Kachhadiya. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
