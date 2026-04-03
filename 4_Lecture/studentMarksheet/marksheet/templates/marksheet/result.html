@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .card {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .card p {
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        hr {
+            margin: 15px 0;
+            border-color: #e0e0e0;
+        }
+
+        .status {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .pass {
+            color: green;
+        }
+
+        .fail {
+            color: red;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background: #0056b3;
+        }
+
+        .btn-back:active {
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if student %}
+        <div class="card">
+            <h3>{{ student.name }}</h3>
+            <p><strong>Enroll No:</strong> {{ student.enroll_no }}</p>
+
+            <hr>
+
+            <p><strong>Math:</strong> {{ student.math }}</p>
+            <p><strong>English:</strong> {{ student.english }}</p>
+            <p><strong>Science:</strong> {{ student.science }}</p>
+            <p><strong>History:</strong> {{ student.history }}</p>
+
+            <hr>
+
+            <p><strong>Total:</strong> {{ student.total }}</p>
+            <p><strong>Percentage:</strong> {{ student.percentage }}%</p>
+
+            <div class="status">
+                {% if student.percentage >= 33 %}
+                    <span class="pass">Pass</span>
+                {% else %}
+                    <span class="fail">Fail</span>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+
+    <a href="{% url 'home' %}" class="btn-back">Back to Search</a>
+    <a href="{% url 'all_students' %}" class="btn-back">All Result</a>
+</div>
+
+</body>
+</html>

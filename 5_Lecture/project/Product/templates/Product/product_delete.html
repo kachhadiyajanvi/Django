@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Product</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Modal Style */
+        .modal-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            border-radius: 8px;
+            width: 400px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .modal-header {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #4a3f52;
+        }
+
+        .modal-body {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        /* Buttons */
+        .btn {
+            font-size: 16px;
+            padding: 12px 24px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-delete {
+            background-color: #cdb4db; /* Your base color */
+            color: white;
+            border: 1px solid #c6a4d8;
+        }
+
+        .btn-delete:hover {
+            background-color: #d7a3d5;
+        }
+
+        .btn-cancel {
+            background-color: #f0f0f0;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        .btn-cancel:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="modal-container">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Delete Product</h2>
+        </div>
+        <div class="modal-body">
+            <p>Are you sure you want to delete <b>{{ product.Name }}</b>?</p>
+        </div>
+        <div class="modal-footer">
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-delete">Yes, Delete</button>
+            </form>
+            <a href="{% url 'product_list' %}">
+                <button class="btn btn-cancel">Cancel</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
